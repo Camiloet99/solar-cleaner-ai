@@ -1,0 +1,16 @@
+export USE_NN=true
+export POLICY_PATH=/app/policy_seed.pt
+uvicorn app:app --host 0.0.0.0 --port 5001
+
+python export_example.py
+
+
+python train_from_csv.py --csv pv_cleaning_training_windows.csv \
+  --epochs 300 --lr 3e-3 \
+  --out policy_trained.pt \
+  --scaler scaler.json
+
+export USE_NN=true
+export POLICY_PATH=/app/policy_trained.pt
+export SCALER_PATH=/app/scaler.json
+uvicorn app:app --host 0.0.0.0 --port 5001
