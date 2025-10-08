@@ -4,13 +4,38 @@
     "dust_trend": 0.04987329989671707,
     "temp_mean": 40.05459213256836,
     "hum_mean": 54.92918395996094,
-    "power_mean": 185.00889587402344
+    "power_mean": 185.00889587402344,
+    "dust_last": 0.5259192585945129,
+    "dust_delta": 0.04987329989671707,
+    "prev_rpm01": 0.7163116931915283,
+    "prev_water01": 0.6972734332084656,
+    "prev_press01": 0.7163116931915283,
+    "prev_det01": 0.06962168961763382
   },
   "stds": {
     "dust_mean": 0.22284118831157684,
     "dust_trend": 0.06041789799928665,
     "temp_mean": 9.061144828796387,
     "hum_mean": 17.867713928222656,
-    "power_mean": 28.050067901611328
-  }
+    "power_mean": 28.050067901611328,
+    "dust_last": 0.22510594129562378,
+    "dust_delta": 0.06041789799928665,
+    "prev_rpm01": 0.159834086894989,
+    "prev_water01": 0.16298142075538635,
+    "prev_press01": 0.159834086894989,
+    "prev_det01": 0.019003765657544136
+  },
+  "features": [
+    "dust_mean",
+    "dust_trend",
+    "temp_mean",
+    "hum_mean",
+    "power_mean",
+    "dust_last",
+    "dust_delta",
+    "prev_rpm01",
+    "prev_water01",
+    "prev_press01",
+    "prev_det01"
+  ]
 }

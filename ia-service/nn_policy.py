@@ -10,7 +10,7 @@ class PolicyNet(nn.Module):
       - 5 continuas: brushRpm, waterFlow, pressure, passes, detergentPct  (0..1 con Sigmoid)
       - 4 discretas (softmax): route logits -> {keep, zigzag_thin, zigzag_wide, spiral_focus}
     """
-    def __init__(self, in_dim=5, hidden=64):
+    def __init__(self, in_dim=11, hidden=64):
         super().__init__()
         self.enc = nn.Sequential(
             nn.Linear(in_dim, hidden), nn.GELU(),
